@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts tests/*.test.mjs",
     "build": "vite build && node scripts/check-public.mjs",
-    "ci": "npm run typecheck && npm test && npm run build",
+    "ci": "npm run typecheck && npm test && npm run build && node scripts/check-worker.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "deploy": "wrangler deploy --config cloudflare/wrangler.jsonc"
   },

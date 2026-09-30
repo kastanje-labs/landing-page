@@ -23,6 +23,14 @@ is no deployed version or live-site verification to report.
 
 ## Recovery
 
+Caller follow-up found the default asset HTML handling redirected `/index.html`
+back to `/`, creating a loop through the Worker. `html_handling: none` fixes that
+without enabling arbitrary SPA routes. The CI gate now also starts the actual
+local Cloudflare Worker and checks root/manifest/assets/HEAD, app redirect, unknown
+routes, API denial and POST denial. This integration check guards the asset-binding
+behavior that the initial unit fixture did not model. Live deployment remains
+pending separate review of the corrected candidate.
+
 This candidate has not changed the live Worker. If a later, separately authorized
 deployment is made, record its source commit and deployed version here. Retain the
 previous confirmed Worker version and use the rollback command in

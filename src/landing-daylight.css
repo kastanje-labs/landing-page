@@ -1,0 +1,184 @@
+/* A daylight study: the illustration supplies atmosphere, the UI stays quiet. */
+.lc--daylight {
+  --lc-paper: #f5f8fd;
+  --lc-surface: #e8eff8;
+  --lc-ink: #0b1428;
+  --lc-muted: #4b627c;
+  --lc-line: #cbd7e5;
+  --lc-orange: #af4823;
+  color-scheme: light;
+  padding-bottom: 0;
+}
+.lc--daylight .lc-header nav a,
+.lc--daylight .lc-header-cta {
+  color: var(--lc-ink);
+}
+.lc--daylight .lc-header nav a:hover {
+  color: #243e66;
+}
+.lc--daylight .lc-header-cta {
+  border-color: #0b142840;
+  background: #f5f8fd8c;
+}
+.lc--daylight .lc-hero {
+  align-items: flex-start;
+  min-height: 680px;
+  height: clamp(680px, 56.25vw, 1000px);
+}
+.lc--daylight .lc-art img {
+  object-position: center;
+  transform-origin: 77% 72%;
+}
+.lc--daylight .lc-hero-shade {
+  background: none;
+}
+.lc--daylight .lc-hero-copy {
+  margin-top: clamp(120px, 8vw, 150px);
+  width: 49%;
+  max-width: 670px;
+}
+.lc--daylight h1 {
+  font-size: clamp(44px, 4.7vw, 78px);
+  letter-spacing: -0.05em;
+}
+.lc--daylight h1 em,
+.lc--daylight .lc-hero .lc-eyebrow,
+.lc--daylight .lc-hero .lc-intro {
+  color: var(--lc-ink);
+}
+.lc--daylight .lc-hero .lc-eyebrow {
+  margin-bottom: 24px;
+  font-weight: 550;
+}
+.lc--daylight .lc-intro {
+  max-width: 490px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-block: 22px 26px;
+}
+.lc--daylight .lc-button {
+  background: #f47745;
+  color: #0b1428;
+}
+.lc--daylight .lc-button:hover {
+  background: #ff9466;
+}
+.lc--daylight .lc-hero-foot {
+  justify-content: flex-end;
+}
+.lc--daylight .lc-hero-foot > span {
+  display: none;
+}
+.lc--daylight .lc-motion {
+  background: #f5f8fdeb;
+  border-color: #0b142833;
+  backdrop-filter: none;
+}
+.lc--daylight .lc-route-visual li {
+  background: #d9e5f3;
+}
+.lc-study-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 24px;
+  font-size: 11px;
+  border-top: 1px solid var(--lc-line);
+  color: var(--lc-muted);
+}
+.lc-study-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--lc-ink);
+}
+.lc-study-note a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.lc--landsbyen,
+.lc--kolonihaven,
+.lc--landevejen {
+  padding-bottom: 84px;
+}
+.lc-variations--daylight {
+  background: #f5f8fdf5;
+  border-color: #cbd7e5;
+  box-shadow: 0 5px 24px #0b14281a;
+}
+.lc-variations--daylight a[aria-current="page"] {
+  background: #dce7f5;
+  color: #0b1428;
+}
+.lc-variations--daylight a[aria-current="page"] span {
+  color: #af4823;
+}
+@media (min-width: 761px) {
+  .lc--daylight .lc-header nav {
+    padding: 10px 14px;
+    border-radius: 4px;
+    background: #f5f8fdeb;
+  }
+}
+@media (max-width: 1100px) and (min-width: 761px) {
+  .lc--daylight .lc-hero-copy {
+    width: 58%;
+  }
+}
+@media (max-width: 760px) {
+  .lc-variations--daylight {
+    width: calc(100% - 24px);
+    max-width: 420px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .lc-variations--daylight .lc-variations-label,
+  .lc-variations--daylight a span {
+    display: none;
+  }
+  .lc-variations--daylight a {
+    min-height: 44px;
+    justify-content: center;
+    padding-inline: 4px;
+    font-size: 11px;
+  }
+  .lc--daylight .lc-header-cta {
+    background: none;
+  }
+  .lc--daylight .lc-header nav {
+    box-shadow: 0 12px 30px #1739581a;
+  }
+  .lc--daylight .lc-hero {
+    align-items: stretch;
+    min-height: 0;
+    height: auto;
+    background: #eaf3fe;
+  }
+  .lc--daylight .lc-hero-copy {
+    margin: 0 24px;
+    width: calc(100% - 48px);
+  }
+  .lc--daylight h1 {
+    font-size: clamp(32px, 8.4vw, 57px);
+  }
+  .lc--daylight .lc-intro {
+    font-size: 14px;
+    max-width: 400px;
+  }
+  .lc--daylight .lc-art {
+    margin-top: 36px;
+    height: clamp(310px, 88vw, 490px);
+  }
+  .lc--daylight .lc-art::after {
+    display: none;
+  }
+  .lc--daylight .lc-art img {
+    object-position: 78% center;
+  }
+  .lc-study-note {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+}

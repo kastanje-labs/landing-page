@@ -1,0 +1,1 @@
+export const PILOT_CASHBACK_PERCENT = 1;

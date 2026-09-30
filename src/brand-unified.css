@@ -1,0 +1,717 @@
+/* Shared product details and the selected Landskab landing. */
+:root[data-study="ember"],
+:root:not([data-study]) {
+  --accent-text: var(--color-accent-text);
+}
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.theme-toggle {
+  width: var(--control-height);
+  height: var(--control-height);
+  min-height: var(--control-height);
+  flex: 0 0 var(--control-height);
+  border: 0;
+  border-radius: 0;
+  color: var(--ink);
+  background: transparent;
+}
+.theme-toggle svg {
+  shape-rendering: crispEdges;
+}
+.theme-toggle.icon-button:hover {
+  color: var(--ink);
+  background: transparent;
+  opacity: 0.72;
+}
+.app-brand-heading {
+  display: grid;
+  gap: 7px;
+}
+.app-brand-heading > span {
+  margin-left: 36px;
+  font:
+    9px/1.4 GeistMono,
+    monospace;
+  color: var(--muted);
+}
+.sidebar-brand {
+  align-items: flex-start;
+}
+.origin-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font:
+    10px/1.5 GeistMono,
+    monospace;
+}
+.origin-note > span {
+  font:
+    15px/1 system-ui,
+    sans-serif;
+}
+.sidebar-bottom > .origin-note {
+  margin: 18px 12px 0;
+  color: var(--muted);
+  font-size: 9px;
+}
+.access-origin {
+  padding: 22px 24px 32px;
+  text-align: center;
+  color: var(--muted);
+}
+.simple-onboard h1 {
+  font-family: GeistPixel, monospace;
+  font-weight: 400;
+  letter-spacing: -0.045em;
+}
+.button,
+input,
+select,
+textarea {
+  border-radius: var(--radius);
+}
+.button,
+.lc--danmark .lc-button {
+  font-weight: 550;
+}
+.button:not(.icon-button) {
+  min-height: var(--control-height);
+}
+.profile-popover,
+.modal,
+.panel,
+.quick-connect,
+.connection-card,
+.model-card {
+  border-radius: var(--radius);
+}
+:root[data-theme="light"] .sidebar nav a.active svg {
+  color: var(--accent-text);
+}
+.reward-explainer .checks {
+  line-height: 1.6;
+}
+
+/* The landing aliases the very same palette as the workspace. */
+.lc--danmark {
+  --lc-paper: var(--color-page);
+  --lc-surface: var(--color-panel);
+  --lc-ink: var(--color-ink);
+  --lc-muted: var(--color-muted);
+  --lc-line: var(--color-line);
+  --lc-orange: var(--color-accent-text);
+  padding-bottom: 0;
+  color-scheme: inherit;
+}
+.lc--danmark.is-study {
+  padding-bottom: 82px;
+}
+.lc--danmark .lc-header {
+  --header-cta-padding: 18px;
+  gap: 20px;
+}
+.lc--danmark .lc-header nav,
+.lc--danmark[data-time="aften"] .lc-header nav {
+  min-height: var(--control-height);
+  padding: 0 18px;
+  background: color-mix(in srgb, var(--color-page) 78%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-line) 75%, transparent);
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(14px) saturate(115%);
+  backdrop-filter: blur(14px) saturate(115%);
+  box-shadow:
+    inset 0 1px 0 #ffffff30,
+    0 2px 5px #0b14280a;
+  white-space: nowrap;
+}
+.lc--danmark .lc-header nav a,
+.lc--danmark[data-time="aften"] .lc-header nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  color: var(--color-ink);
+}
+.lc--danmark .lc-header nav a:hover {
+  color: var(--color-accent-text);
+}
+.lc-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lc--danmark .lc-header-cta,
+.lc--danmark[data-time="aften"] .lc-header-cta {
+  height: var(--control-height);
+  min-height: var(--control-height);
+  gap: 18px;
+  padding: 0 var(--header-cta-padding);
+  color: var(--color-ink);
+  background: color-mix(in srgb, var(--color-page) 82%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-line) 75%, transparent);
+  border-radius: var(--radius);
+  -webkit-backdrop-filter: blur(14px) saturate(115%);
+  backdrop-filter: blur(14px) saturate(115%);
+  box-shadow:
+    inset 0 1px 0 #ffffff80,
+    0 2px 5px #0b142814;
+  white-space: nowrap;
+}
+.lc--danmark .lc-header-cta:hover {
+  border-color: var(--color-muted);
+  background: color-mix(in srgb, var(--color-page) 94%, transparent);
+}
+/* Glass belongs over the landscape. Content surfaces keep their quiet ink. */
+@media (min-width: 761px) {
+  .lc--danmark.lc-video-study--a .lc-header nav {
+    background: linear-gradient(#ffffff12, #ffffff03), #0b142866;
+    border-color: #ffffff29;
+    box-shadow:
+      inset 0 1px 0 #ffffff1f,
+      0 2px 5px #0b14280d;
+  }
+  .lc--danmark.lc-video-study--a .lc-header nav a {
+    color: var(--color-image-ink);
+  }
+  .lc--danmark.lc-video-study--a .lc-header nav a:hover {
+    color: #fff;
+    opacity: 0.78;
+  }
+  .lc--danmark.lc-video-study--a .lc-header-cta {
+    color: #0b1428;
+    background: linear-gradient(#ffffff24, #ffffff00), #f5f8fdcc;
+    border-color: #ffffff80;
+  }
+  .lc--danmark.lc-video-study--a .lc-header-cta:hover {
+    background: #f5f8fde8;
+    border-color: #ffffffb3;
+  }
+}
+.lc--danmark .lc-header .theme-toggle {
+  background: transparent;
+  color: var(--color-image-ink);
+  border: 0;
+  margin-left: -4px;
+  filter: drop-shadow(0 1px 2px #0b14285c);
+}
+.lc--manifest-page .lc-header .theme-toggle {
+  color: var(--color-ink);
+  filter: none;
+}
+@media (max-width: 760px) {
+  .lc--danmark .lc-header .theme-toggle {
+    color: var(--color-ink);
+    filter: none;
+  }
+}
+.lc--danmark .lc-button {
+  min-height: 48px;
+  background: var(--color-button);
+  color: var(--color-button-ink);
+  border-radius: var(--radius);
+}
+.lc--danmark .lc-button:hover {
+  background: var(--color-button-hover);
+}
+.lc--danmark .lc-route-visual li {
+  background: var(--color-raised);
+}
+.lc--danmark .lc-manifest-details summary {
+  border-color: var(--color-muted);
+}
+.lc--danmark .lc-scene-controls {
+  color: var(--color-ink);
+}
+.lc--danmark .lc-scene-bar,
+.lc--danmark .lc-scene-settings {
+  background: var(--color-page);
+  border-color: var(--color-line);
+  border-radius: var(--radius);
+}
+.lc--danmark .lc-scene-pause {
+  border-left-color: var(--color-line) !important;
+}
+.lc--danmark .lc-time-option:hover {
+  background: var(--color-panel);
+}
+.lc--danmark .lc-time-option:has(input:checked) {
+  background: var(--color-active);
+}
+.lc--danmark .lc-time-option:has(input:focus-visible) {
+  outline-color: var(--color-accent-text);
+}
+.lc--danmark .lc-scene-heading time,
+.lc--danmark .lc-time-hours,
+.lc--danmark .lc-another-scene {
+  color: var(--color-muted);
+}
+.lc--danmark .lc-time-auto,
+.lc--danmark .lc-place-label {
+  border-color: var(--color-line);
+}
+.lc--danmark .lc-time-auto input {
+  accent-color: var(--color-accent-text);
+}
+.lc--danmark .lc-place-label select {
+  background: var(--color-surface);
+  border-color: var(--color-line);
+  color: var(--color-ink);
+}
+.lc--danmark .lc-footer-content h2 {
+  color: var(--color-image-ink);
+}
+.lc--danmark .lc-footer-meta {
+  align-items: center;
+}
+.lc--danmark .lc-video-variations {
+  background: var(--color-page);
+  border-color: var(--color-line);
+}
+.lc--danmark .lc-video-variations > span {
+  color: var(--color-muted);
+}
+.lc--danmark .lc-video-variations a[aria-current] {
+  background: var(--color-active);
+}
+.lc--danmark .lc-video-variations b {
+  color: var(--color-accent-text);
+}
+:root[data-theme="dark"] .lc--danmark.lc-video-study--a .lc-hero-shade {
+  background: linear-gradient(90deg, #0b1428b8, #0b142855 48%, transparent 78%);
+}
+:root[data-theme="dark"]
+  .lc--danmark
+  .lc-hero-copy
+  :is(h1, h1 em, .lc-intro, .lc-eyebrow, .lc-text-link),
+:root[data-theme="dark"] .lc--danmark .lc-header .lc-brand {
+  color: var(--color-image-ink);
+}
+@media (min-width: 761px) {
+  .lc--danmark.lc-video-study--b .lc-hero-copy,
+  .lc--danmark.lc-video-study--c .lc-hero-copy {
+    color: var(--color-ink);
+  }
+}
+@media (max-width: 760px) {
+  .lc--danmark .lc-header {
+    --header-cta-padding: 12px;
+    gap: 10px;
+    padding-inline: 20px;
+  }
+  .lc--danmark .lc-header-actions {
+    margin-left: auto;
+  }
+  .lc--danmark .lc-header-cta {
+    padding-inline: 12px;
+    gap: 8px;
+  }
+  .lc--danmark .lc-header-cta svg {
+    display: none;
+  }
+  .lc--danmark .lc-header nav {
+    padding: 12px 20px;
+    background: var(--color-page);
+  }
+  .lc--danmark .lc-header,
+  .lc--danmark[data-time="aften"] .lc-header,
+  .lc--danmark .lc-menu {
+    color: var(--color-ink);
+  }
+  .lc--danmark .lc-header .lc-brand {
+    font-size: 24px;
+  }
+  .lc--danmark .lc-menu {
+    padding: 8px;
+    min-height: 44px;
+  }
+  .lc--danmark
+    .lc-hero-copy
+    :is(h1, h1 em, .lc-intro, .lc-eyebrow, .lc-text-link) {
+    color: var(--color-ink);
+  }
+  .lc--danmark .lc-footer-meta {
+    align-items: flex-start;
+  }
+  .lc--danmark:not(.is-study) .lc-scene-settings {
+    bottom: max(16px, env(safe-area-inset-bottom));
+  }
+}
+@media (max-width: 360px) {
+  .lc--danmark .lc-header {
+    --header-cta-padding: 8px;
+    gap: 6px;
+    padding-inline: 14px;
+  }
+  .lc--danmark .lc-header .lc-brand {
+    font-size: 21px;
+    gap: 6px;
+  }
+  .lc--danmark .lc-header .lc-brand svg {
+    width: 27px;
+  }
+  .lc--danmark .lc-header-actions {
+    gap: 5px;
+  }
+  .lc--danmark .lc-header-cta {
+    padding-inline: 8px;
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}
+
+/* A single grade keeps the village poster, moving clip and footer in sync. */
+.lc-color-defs {
+  position: absolute;
+  pointer-events: none;
+}
+.lc [data-scene-id="landsbyen-aften"] {
+  filter: url(#lc-village-blue-hour);
+}
+.lc-manifest-link {
+  margin-top: 20px;
+}
+.lc-logo-strip {
+  padding-block: 24px 44px;
+}
+.lc-logo-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: var(--lc-muted);
+}
+.lc-logo-heading p {
+  font:
+    10px GeistMono,
+    monospace;
+  margin: 0;
+}
+.lc-logo-window {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+.lc-logo-track {
+  display: flex;
+  width: max-content;
+  animation: lc-logo-drift 32s linear infinite;
+}
+.lc-logo-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 80px;
+  min-width: min(1060px, 90vw);
+  padding: 16px 40px;
+}
+.lc-project-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--lc-muted);
+  font:
+    25px GeistPixel,
+    monospace;
+  min-height: 50px;
+}
+.lc-project-logo {
+  transition: color 0.2s;
+}
+.lc-project-logo--cryptoclub:is(:hover, :focus-visible) {
+  color: #347ad9;
+}
+.lc-project-logo--arcitai:is(:hover, :focus-visible) {
+  color: #236b59;
+}
+.lc-project-logo--onlinesourdough:is(:hover, :focus-visible) {
+  color: #b86f36;
+}
+:root[data-theme="dark"]
+  .lc-project-logo--cryptoclub:is(:hover, :focus-visible) {
+  color: #74a8f0;
+}
+:root[data-theme="dark"] .lc-project-logo--arcitai:is(:hover, :focus-visible) {
+  color: #8bc9b5;
+}
+:root[data-theme="dark"]
+  .lc-project-logo--onlinesourdough:is(:hover, :focus-visible) {
+  color: #d58a48;
+}
+.lc-project-logo:is(:hover, :focus-visible) .lc-project-cryptoclub {
+  filter: none;
+}
+.lc-project-logo--cryptoclub {
+  font-family: Geist, sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: -0.06em;
+}
+.lc-project-mark {
+  display: block;
+  width: 38px;
+  height: 32px;
+  background: currentColor;
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+.lc-logo-strip:hover .lc-logo-track,
+.lc-logo-strip:focus-within .lc-logo-track {
+  animation-play-state: paused;
+}
+.lc-logo-strip:focus-within .lc-logo-window {
+  overflow: visible;
+}
+.lc-logo-strip:focus-within .lc-logo-track,
+.lc-logo-strip[data-reduced="true"] .lc-logo-track {
+  animation: none;
+  transform: none;
+  width: 100%;
+}
+.lc-logo-strip:focus-within .lc-logo-group[aria-hidden],
+.lc-logo-strip[data-reduced="true"] .lc-logo-group[aria-hidden] {
+  display: none;
+}
+.lc-logo-strip[data-reduced="true"] .lc-logo-window {
+  mask-image: none;
+}
+.lc--manifest-page .lc-header {
+  position: relative;
+  color: var(--lc-ink);
+  background: var(--lc-paper);
+}
+:root[data-theme] .lc--manifest-page .lc-header .lc-brand {
+  color: var(--lc-ink);
+}
+.lc--manifest-page .lc-header nav a[aria-current] {
+  color: var(--color-accent-text);
+}
+.manifest-article {
+  padding: 84px 24px 100px;
+}
+.manifest-intro {
+  max-width: 890px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.manifest-intro > .lc-eyebrow {
+  color: var(--color-accent-text);
+}
+.manifest-intro h1 {
+  font:
+    400 clamp(38px, 5vw, 66px) / 1.1 GeistPixel,
+    monospace;
+  letter-spacing: -0.045em;
+  margin: 25px 0;
+}
+.manifest-intro h1 em {
+  color: var(--lc-muted);
+  font-style: normal;
+}
+.manifest-intro > p:not(.lc-eyebrow) {
+  max-width: 550px;
+  margin: 0 auto 27px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--lc-muted);
+}
+.manifest-intro .origin-note {
+  color: var(--lc-muted);
+}
+.manifest-body {
+  max-width: 650px;
+  margin: auto;
+}
+.manifest-body p {
+  font-size: 16px;
+  line-height: 1.85;
+  margin: 0 0 20px;
+  color: var(--lc-muted);
+  text-wrap: pretty;
+}
+.manifest-body section {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 20px;
+  margin-top: 46px;
+  padding-top: 30px;
+  border-top: 1px solid var(--lc-line);
+}
+.manifest-body section > span {
+  font:
+    12px/28px GeistMono,
+    monospace;
+  color: var(--color-accent-text);
+}
+.manifest-body h2 {
+  font:
+    400 29px/1.2 GeistPixel,
+    monospace;
+  letter-spacing: -0.035em;
+  margin: 0 0 17px;
+}
+.manifest-signoff {
+  margin: 58px 0 28px;
+  display: grid;
+  justify-items: start;
+  gap: 18px;
+}
+.manifest-signoff > p {
+  margin: 0;
+  color: var(--lc-ink);
+}
+.manifest-signoff > span {
+  font:
+    28px GeistPixel,
+    monospace;
+}
+@keyframes lc-logo-drift {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 760px) {
+  .lc-logo-strip {
+    padding-block: 22px;
+  }
+  .lc-logo-group {
+    min-width: 740px;
+    gap: 45px;
+    padding-inline: 24px;
+  }
+  .lc-project-logo {
+    font-size: 22px;
+  }
+  .lc-logo-strip:focus-within .lc-logo-group,
+  .lc-logo-strip[data-reduced="true"] .lc-logo-group {
+    min-width: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+  }
+  .manifest-article {
+    padding: 44px 24px 65px;
+  }
+  .manifest-intro {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  .manifest-intro > p:not(.lc-eyebrow) {
+    font-size: 16px;
+  }
+  .manifest-intro h1 {
+    font-size: clamp(36px, 8vw, 52px);
+  }
+  .manifest-body section {
+    grid-template-columns: 22px 1fr;
+    gap: 12px;
+  }
+  .manifest-body h2 {
+    font-size: 25px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lc-logo-track {
+    animation: none;
+  }
+}
+
+.button:not(.secondary):not(.ghost):not(.danger-button) {
+  background: var(--color-button);
+  border-color: var(--color-button);
+  color: var(--color-button-ink);
+}
+.button:not(.secondary):not(.ghost):not(.danger-button):hover {
+  background: var(--color-button-hover);
+  border-color: var(--color-button-hover);
+}
+.lc-project-cryptoclub {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  filter: grayscale(1);
+  transition: filter 0.2s;
+}
+
+.first-request {
+  padding: 12px 0 22px;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+.first-request > div > strong {
+  font-weight: 500;
+  color: var(--muted);
+}
+.first-request > a > span {
+  font-family: GeistMono, monospace;
+  border-radius: 0;
+  background: transparent;
+  width: 20px;
+  height: 20px;
+}
+.first-request > a > strong {
+  font-weight: 500;
+}
+
+/* The public hero has only its motion control; scene settings stay local. */
+.lc--danmark .lc-scene-controls--public .lc-scene-bar {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+.lc--danmark .lc-scene-controls--public .lc-scene-pause {
+  border: 0;
+  background: #0b142845;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.lc--danmark .lc-value-number {
+  color: var(--color-cashback);
+  position: relative;
+}
+.lc--danmark .lc-value-number > .lc-value-return {
+  display: block;
+  font:
+    12px GeistMono,
+    monospace;
+  letter-spacing: 0;
+  margin-top: -4px;
+}
+.lc--danmark .lc-value .lc-eyebrow,
+.lc--danmark .lc-value .lc-text-link {
+  color: var(--color-cashback);
+}
+.lc--danmark .lc-value {
+  border-top-color: color-mix(
+    in srgb,
+    var(--color-cashback) 25%,
+    var(--color-line)
+  );
+}
+@media (max-width: 760px) {
+  .lc--danmark .lc-header nav.is-open,
+  .lc--danmark[data-time="aften"] .lc-header nav.is-open {
+    background: var(--color-page);
+  }
+}

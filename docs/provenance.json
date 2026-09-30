@@ -1,0 +1,29 @@
+{
+  "sourceRepository": "kastanje-labs/Kastanje",
+  "sourceCommit": "0c59ec5c4203da1a37026f0378ce22b9bc2f36a8",
+  "copiedImportGraph": [
+    "src/chestnut.ts",
+    "src/components/Chestnut.tsx",
+    "src/components/CuriousChestnut.tsx",
+    "src/components/LandingActivity.tsx",
+    "src/components/LandingConcept.tsx",
+    "src/components/LandingLandscape.tsx",
+    "src/components/LandingProduct.tsx",
+    "src/components/LandingProductGraphic.tsx",
+    "src/components/ManifestArticle.tsx",
+    "src/components/PixelIcon.tsx",
+    "src/components/ProjectLogos.tsx",
+    "src/components/Theme.tsx",
+    "src/components/ui.tsx",
+    "src/deployment.ts",
+    "src/landing-concepts.css",
+    "src/landing-daylight.css",
+    "src/landing-landscape.css",
+    "src/landing-product.css",
+    "src/landing-scenes.ts",
+    "src/landing-video-studies.css",
+    "src/shared.ts",
+    "src/theme-preference.ts"
+  ],
+  "boundary": "Fresh history; only the public landing import graph, reviewed styling and explicit public assets. Shared constants, deployment and OriginNote were reduced."
+}

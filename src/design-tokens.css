@@ -1,0 +1,110 @@
+/* Shared Kastanje palette. Semantic direction: design/DESIGN.md. */
+:root {
+  --color-accent: #f47745;
+  --color-accent-hover: #ff8b60;
+  --color-button: #b94920;
+  --color-button-hover: #a5401b;
+  --color-button-ink: #ffffff;
+  --color-image-ink: #f5f8fd;
+  --radius: 6px;
+  --control-height: 44px;
+}
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-page: #f5f8fd;
+  --color-surface: #ffffff;
+  --color-panel: #e8eff8;
+  --color-raised: #dfe8f3;
+  --color-sidebar: #edf2f9;
+  --color-ink: #0b1428;
+  --color-muted: #4b627c;
+  --color-subtle: #62738b;
+  --color-line: #cbd7e5;
+  --color-active: #dce7f5;
+  --color-accent-text: #af4823;
+  --color-accent-soft: #fae8df;
+  --color-reward: #416991;
+  --color-reward-bg: #e0eaf5;
+  --color-cashback: #257453;
+  --color-cashback-soft: #e1efe7;
+  --color-danger: #a83e2b;
+  --color-danger-bg: #ffede7;
+  --color-compare-blue: #386fab;
+  --color-compare-purple: #7956a6;
+  --color-provider-copper: #92624e;
+  --color-provider-slate: #62768e;
+  --heat-0: #e8eef6;
+  --heat-1: #cbd9eb;
+  --heat-2: #a1bad8;
+  --heat-3: #7096c0;
+  --heat-4: #456e9e;
+  --map-tile: #c0d1e5;
+  --map-alt: #9cb7d5;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-page: #0b1428;
+  --color-surface: #121f37;
+  --color-panel: #172640;
+  --color-raised: #1d2f4d;
+  --color-sidebar: #0e1930;
+  --color-ink: #e5ebf5;
+  --color-muted: #a3b2c8;
+  --color-subtle: #8da0bc;
+  --color-line: #2c3e59;
+  --color-active: #233652;
+  --color-accent-text: #ff986e;
+  --color-accent-soft: #302a2e;
+  --color-reward: #a5bfdf;
+  --color-reward-bg: #182e48;
+  --color-cashback: #91d7b3;
+  --color-cashback-soft: #142f2c;
+  --color-danger: #f4a18a;
+  --color-danger-bg: #35272e;
+  --color-compare-blue: #8eb4e1;
+  --color-compare-purple: #bc9ee9;
+  --color-provider-copper: #c5967f;
+  --color-provider-slate: #a0b0c5;
+  --heat-0: #1b2b46;
+  --heat-1: #2b4161;
+  --heat-2: #41638c;
+  --heat-3: #628bb9;
+  --heat-4: #9cbedf;
+  --map-tile: #213b5e;
+  --map-alt: #315480;
+}
+:root {
+  --paper: var(--color-page);
+  --canvas: var(--color-page);
+  --surface: var(--color-surface);
+  --surface-2: var(--color-panel);
+  --surface-3: var(--color-raised);
+  --sidebar: var(--color-sidebar);
+  --ink: var(--color-ink);
+  --muted: var(--color-muted);
+  --subtle: var(--color-subtle);
+  --line: var(--color-line);
+  --active: var(--color-active);
+  --accent: var(--color-accent);
+  --accent-hover: var(--color-accent-hover);
+  --accent-text: var(--color-accent-text);
+  --accent-soft: var(--color-accent-soft);
+  --orange: var(--color-accent);
+  --orange-light: var(--color-accent-soft);
+  --button-ink: var(--color-button-ink);
+  --reward: var(--color-reward);
+  --reward-bg: var(--color-reward-bg);
+  --green: var(--color-reward);
+  --green-light: var(--color-reward-bg);
+  --danger: var(--color-danger);
+  --danger-bg: var(--color-danger-bg);
+  --chart-grid: var(--color-line);
+  color: var(--color-ink);
+  background: var(--color-page);
+}
+
+:root,
+:root[data-theme="light"] {
+  --money: var(--color-reward);
+}

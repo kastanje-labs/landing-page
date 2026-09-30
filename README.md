@@ -11,7 +11,8 @@ chestnut are shared with the separately maintained platform and editor extension
   payments run there. This website has no newsletter, sign-in form, database or API.
 
 “Åbn appen” opens `https://kastanje-app-demo.gustavonline.workers.dev/app`.
-Legacy `/app`, `/onboarding` and `/connect` links redirect to that platform.
+Legacy `/app`, `/onboarding`, `/connect/vscode` and `/connect/codex` links redirect
+to that platform.
 
 ## Develop and check
 

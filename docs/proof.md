@@ -1,39 +1,48 @@
 # Verification and recovery
 
-## Local candidate — 2026-09-30
+## Accepted and deployed — 2026-09-30
 
-This records local preparation evidence. The caller owns the separate review and
-acceptance. No GitHub, account or live deployment action was performed, so there
-is no deployed version or live-site verification to report.
+The public website was extracted to fresh public history, independently reviewed,
+merged and deployed. Source: `758147ec2935498209d4b148f28646793a33adf2`.
+Live URL: https://kastanje-demo.gustavonline.workers.dev/ .
+Cloudflare Worker: `kastanje-demo`; active version at release:
+`25a3c1a5-2284-4bbb-a8d6-33ff1eb0bfde` (100%).
+Previous confirmed version: `9a48b41f-f89f-4658-881d-86c1a311f431`.
 
-- Runtime: Node.js 22.21.1 and npm 11.14.1.
-- `npm install` generated `package-lock.json`; npm reported zero vulnerabilities.
-- `npm ci && npm run ci` passed: TypeScript check, 17 tests, production build and
-  public boundary check.
-- The public checker traced 26 site source modules, one Worker module and 7
-  entry-reachable build files; compared 48 public assets byte-for-byte; and scanned
-  built text and Worker source for common credential patterns. It is a scoped
-  check, not an exhaustive security review.
-- Local browser inspection covered desktop and 390 px mobile layouts in light and
-  dark themes. The page used local assets, showed the expected footer links and
-  reported no browser console errors.
-- `npx wrangler deploy --config cloudflare/wrangler.jsonc --dry-run` passed with
-  Wrangler 4.144.0. It read 55 built assets and resolved the configured bindings;
-  dry-run exited without deploying.
+- Node.js 22.21.1, npm 11.14.1; `npm ci && npm run ci` passed TypeScript,
+  17 tests, production build, public boundary check and actual local Cloudflare
+  Worker integration.
+- The default asset HTML handling initially redirected `/index.html` back to
+  `/`, creating a loop through the Worker. `html_handling: none` corrected it.
+  The real Worker integration gate covers root/manifest/assets/HEAD, fixed app
+  redirect, unknown routes, API denial and POST denial.
+- Live readback: `/` and `/manifest` return 200; `/app` returns the bounded 302
+  redirect to the separate platform; API/v1/MCP/unknown paths return 404;
+  POST returns 405. Reviewed public assets matched the deployed build.
+- Browser inspection covered desktop and 390 px mobile, light/dark themes,
+  manifest, footer links and app CTA, without observed console errors.
+- Public source/build screening and independent review checked the landing
+  import graph, assets and source history. This is scoped evidence, not an
+  exhaustive security review. The public website owns no account, auth,
+  billing, inference, newsletter form or write API.
+
+## Delivery audit — 2026-10-01
+
+The independent audit found no unintended code/asset loss. Of the original
+public assets, 47 are byte-identical; `robots.txt` was deliberately adapted for
+standalone ownership. The provenance mapping explains the small reductions in
+shared helpers. The public repository has no private-platform commit ancestry.
+The delivered runtime has not changed in this documentation correction.
+GitHub CI run `36723100110` passed for the delivered main revision.
+
+The domain `kastanje.ai` has not been bought or attached. The existing Worker is
+ready for a custom domain after purchase and Cloudflare zone activation; see
+[hosting](hosting.md). No new hosting service or account migration was created.
 
 ## Recovery
 
-Caller follow-up found the default asset HTML handling redirected `/index.html`
-back to `/`, creating a loop through the Worker. `html_handling: none` fixes that
-without enabling arbitrary SPA routes. The CI gate now also starts the actual
-local Cloudflare Worker and checks root/manifest/assets/HEAD, app redirect, unknown
-routes, API denial and POST denial. This integration check guards the asset-binding
-behavior that the initial unit fixture did not model. Live deployment remains
-pending separate review of the corrected candidate.
-
-This candidate has not changed the live Worker. If a later, separately authorized
-deployment is made, record its source commit and deployed version here. Retain the
-previous confirmed Worker version and use the rollback command in
-[hosting and recovery](hosting.md) if recovery is needed. For a local source
-reversal, use `git revert` on the candidate commit before preparing another
-deployment.
+Keep the previous confirmed Worker version and reviewed source. Use the rollback
+command in [hosting and recovery](hosting.md) if needed. Production rollback has
+not been exercised. Website rollback does not modify platform account data,
+Durable Objects or credentials. For source reversal use `git revert`, then run
+the same verification before any separately authorized redeployment.
